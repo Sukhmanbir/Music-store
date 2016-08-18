@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*    
+    File: controllers/StoreController.cs
+    Desc: Controller for the viewing genre, album and artist items
+    Author: Sukhmanbir Kaur
+    Student #: 200303856
+    Date Modified: Aug 18, 2016
+    History:
+        initial commit
+        display index page, genre items
+        display album and artist items
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,15 +29,6 @@ namespace FinalExam_Sukhmanbir_200303856.Controllers
             return View();
         }
 
-        // GET: /Store/Details/5
-
-        public ActionResult Details(int id = 1)
-        {
-            Album album = storeDB.Albums.Find(id);
-
-            return View(album);
-        }
-
         // GET: /Store/Genre
         public ActionResult Genre()
         {
@@ -35,7 +38,7 @@ namespace FinalExam_Sukhmanbir_200303856.Controllers
         }
 
         // GET: /Store/Album
-        public ActionResult Albums()
+        public ActionResult Album()
         {
             List<Album> albums = storeDB.Albums.ToList();
 
@@ -43,7 +46,7 @@ namespace FinalExam_Sukhmanbir_200303856.Controllers
         }
 
         // GET: /Store/Artist
-        public ActionResult Artists()
+        public ActionResult Artist()
         {
             List<Artist> artists = storeDB.Artists.ToList();
 
