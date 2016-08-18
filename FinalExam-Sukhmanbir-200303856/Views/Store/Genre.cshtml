@@ -1,0 +1,17 @@
+﻿@using FinalExam_Sukhmanbir_200303856.Models
+@model IEnumerable<Genre>
+@{
+    ViewBag.Title = "Genres";
+
+}
+<h3>Genres</h3>
+<p>
+    There are @Model.Count()
+    genres:
+</p>
+<ul>
+    @foreach (Genre item in Model)
+    {
+        <li>@item.Name</li>
+    }
+</ul>

@@ -1,0 +1,18 @@
+﻿@using FinalExam_Sukhmanbir_200303856.Models
+@model IEnumerable<Artist>
+@{
+    ViewBag.Title = "Artists";
+
+}
+<h3>Artists</h3>
+<p>
+    There are @Model.Count()
+    artists:
+</p>
+<ul>
+    @foreach (Artist item in Model)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
+
